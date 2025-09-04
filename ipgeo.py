@@ -1,7 +1,13 @@
 import ipinfo     
+import subprocess
+import sys
+import io 
+import os
 
 handler = ipinfo.getHandler()
 details = handler.getDetails() 
+sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
+
 
 print(r"""
  ______  _______          ______   ________   ______         ________  _______    ______    ______   __    __  ________  _______  
